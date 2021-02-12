@@ -7,6 +7,8 @@ import SignUp from "../routes/SignUp";
 import StockDetails from "../routes/StockDetails";
 import UpdatePost from "../routes/UpdatePost/UpdatePost";
 import "./App.css";
+const API_TOKEN = process.env.REACT_APP_POCKET_STOCKS_KEY;
+
 
 const App = () => {
   const [currentMarketPrice, setCurrentMarketPrice] = React.useState(0);
@@ -24,7 +26,7 @@ const App = () => {
         method: "GET",
         headers: {
           "x-rapidapi-key":
-            "f31f4c4ae7msh19ad0c55e44bda2p1efe8ajsn5d61ef1eec85",
+            `${API_TOKEN}`,
           "x-rapidapi-host": "twelve-data1.p.rapidapi.com",
         },
       }
