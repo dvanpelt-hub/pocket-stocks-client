@@ -1,0 +1,93 @@
+header,
+.briefOV,
+.appDesc,
+.signUpForm {
+  position: center;
+  text-align: center;
+  margin-left: 25px;
+  margin-right: 25px;
+}
+
+header {
+  font-size: 20px;
+}
+
+.landingPage {
+  font-size: 20px;
+}
+
+.join_button {
+  margin: 10px;
+}
+
+input {
+  transition: width 0.4s ease-in-out;
+  margin-bottom: 10px;
+}
+
+input:focus {
+  border: 3px solid #555;
+}
+
+label {
+  margin-right: 20px;
+}
+
+/**
+ *  Tablet Vertical
+
+@media screen and (min-width: 620px) {
+  header {
+    font-size: 25px;
+    margin: 75px;
+  }
+  button {
+    padding: 15px;
+    font-size: 18px;
+    font-weight: bold;
+  }
+}
+
+/**
+ *  Tablet Horizontal
+ 
+@media screen and (min-width: 960px) {
+  header h1 {
+    margin-bottom: 7rem;
+  }
+
+  .briefOV,
+  .appDesc,
+  .signUpForm {
+    margin-top: 10rem;
+    margin-bottom: 20rem;
+  }
+
+  .briefOV h3,
+  .appDesc h3,
+  .signUpForm h3 {
+    font-size: 30px;
+  }
+
+  .briefOV p,
+  .appDesc p,
+  .signUpForm p {
+    font-size: 20px;
+  }
+  input {
+    transition: width 0.4s ease-in-out;
+    margin-left: 400px;
+    margin-bottom: 15px;
+  }
+  .signup-form {
+    text-align: left;
+    margin-left: 100px;
+  }
+}
+
+/**
+ *  Desktop
+ 
+@media screen and (min-width: 1200px) {
+}
+*/

@@ -1,0 +1,30 @@
+.form-row {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.form-column {
+  text-align: center;
+}
+
+.commentSection {
+  display: flex;
+  justify-content: center;
+}
+
+textarea.textbox {
+  width: 800px;
+  height: 200px;
+  margin-top: 3rem;
+}
+
+.postButton,
+.getUpdatedMarketPrices {
+  display: flex;
+  margin: 3rem;
+  justify-content: center;
+}
+
+.inputTickerSymbol {
+  width: 90px;
+}
