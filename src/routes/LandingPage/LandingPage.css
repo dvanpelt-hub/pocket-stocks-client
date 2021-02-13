@@ -1,15 +1,39 @@
 header,
 .briefOV,
 .appDesc,
-.signUpForm {
+.signUpForm,
+.navHoldings,
+.navHold {
+  font-family: "Cormorant", sans-serif;
   position: center;
   text-align: center;
   margin-left: 25px;
   margin-right: 25px;
 }
 
+.navHold {
+  text-decoration: none;
+  font-weight: bolder;
+  color: rgb(255, 255, 255);
+  padding: 10px;
+  background-color: rgb(124, 119, 118);
+  border-radius: 10px;
+}
+
+.navHold:hover {
+  cursor: pointer;
+  padding: 10px;
+  background-color: rgb(221, 221, 221);
+  color: rgb(139, 137, 136);
+  border-radius: 10px;
+}
+
+h1 {
+  font-weight: lighter;
+}
+
 header {
-  font-size: 20px;
+  font-size: 30px;
 }
 
 .landingPage {

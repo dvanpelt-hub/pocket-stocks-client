@@ -1,27 +1,39 @@
 import React, { Component } from 'react'
+import { Link } from 'react-router-dom';
 import './LandingPage.css';
 
 export default class LandingPage extends Component {
   render() {
     return (
       <div className="landingPage">
+        <div className="links">
+          <Link className="landing" to="/">
+            Home
+          </Link>
+          <br />
+          <Link className="holdings" to="/home">
+            Holdings
+          </Link>
+        </div>
         <header>
         <h1>Pocket Stocks</h1>
-        <button className="join_button" type="submit">Sign up</button>
+        {/* <button className="join_button" type="submit">Sign up</button> */}
       </header>
       <section className="briefOV">
           <h3>Stock predictions in the palm of your hand</h3>
-        <p>[<em>placeholder for screenshot of ROI tracker. possibly a background image related to stocks.</em>]</p>
         <p>
           Everyone wants to say "I told you so", especially on Wallstreet...
         </p>
       </section>
       <section className="appDesc">
-          <h3>View your holdings and relative ROI</h3>
-        <p>[<em>placeholder for screenshot of holdings</em>]</p>
-        <p>Portfolio holdings, purchase price, current price, and ROI.</p>
+          <h3>Post your stock predictions, forecasts, and opinion on past, current, and future stock valuations</h3>
       </section>
-      <section className="signUpForm">
+      <div className="navHoldings">
+        <Link className="navHold" to="/home">
+            Get Started!
+          </Link>
+      </div>
+      {/* <section className="signUpForm">
           <h3>Sign up to start keeping track!</h3>
         <form className="signup-form">
           <div className="first-name">
@@ -56,7 +68,7 @@ export default class LandingPage extends Component {
           </div>
           <button className="join_button" type="submit">Sign Up</button>
         </form>
-      </section>
+      </section> */}
       </div>
     )
   }

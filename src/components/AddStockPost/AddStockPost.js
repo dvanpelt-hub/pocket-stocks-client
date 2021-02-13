@@ -14,7 +14,8 @@ const AddStockPost = (props) => {
     e.preventDefault();
     const postData = async () => {
       try {
-        const url = "http://localhost:3000/api/v1/stocks";
+        const url = "https://fathomless-ravine-36841.herokuapp.com/";
+        // const url = "http://localhost:3000/api/v1/stocks";
         const options = {
           method: "POST",
           headers: {

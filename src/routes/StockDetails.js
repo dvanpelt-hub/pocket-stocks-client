@@ -1,6 +1,8 @@
 import React, { useContext, useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { StocksContext } from "../context/StocksContext";
+import Nav from '../components/navigation/Nav';
+
 
 const StockDetails = (props) => {
   const { id } = useParams();
@@ -16,7 +18,8 @@ const StockDetails = (props) => {
 
     const fetchData = async () => {
       try {
-        const url = `http://localhost:3000/api/v1/stocks/${id}`;
+        const url = "https://fathomless-ravine-36841.herokuapp.com/";
+        // const url = `http://localhost:3000/api/v1/stocks/${id}`;
         const options = {
           method: "GET",
           headers: {
@@ -60,6 +63,7 @@ const StockDetails = (props) => {
 
   return (
     <div>
+      <Nav />
       {/* Renders only if a stock was selected */}
       <h1>{selectedStock && selectedStock.ticker_symbol}</h1>
       <div>
