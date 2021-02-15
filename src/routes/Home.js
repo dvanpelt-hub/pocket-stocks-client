@@ -6,13 +6,6 @@ import Nav from '../components/navigation/Nav';
 
 const Home = (props) => {
 
-  const [ currentMarketPrice, setCurrentMarketPrice ] = React.useState(0);
-
-  // if (currentMarketPrice !== 0) {
-  //   setCurrentMarketPrice(0);
-  // } else {
-  // }
-
   return (
     <div>
       <Nav />

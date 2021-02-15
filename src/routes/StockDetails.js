@@ -18,10 +18,11 @@ const StockDetails = (props) => {
 
     const fetchData = async () => {
       try {
-        const url = "https://fathomless-ravine-36841.herokuapp.com/";
-        // const url = `http://localhost:3000/api/v1/stocks/${id}`;
+        // const url = "https://fathomless-ravine-36841.herokuapp.com/";
+        const url = `http://localhost:3000/api/stocks/${id}`;
         const options = {
           method: "GET",
+          mode: "cors",
           headers: {
             Accept: "application/json",
             "Content-Type": "application/json",
@@ -37,11 +38,11 @@ const StockDetails = (props) => {
           .then((responseJson) => {
             // CALLBACK PROP TO USE SET CONTEXT ON TICKER SYMBOL //
             props.setTicker(responseJson.holdings.stock.ticker_symbol);
-            // UPDATES THE SELECTED STOCK ON PAGE LOAD //
-            setSelectedStock(responseJson.holdings.stock);
-            // UPDATES THE POST ON PAGE LOAD //
+            // // UPDATES THE SELECTED STOCK ON PAGE LOAD //
+            setSelectedStock(responseJson.holdings.ticker_symbol);
+            // // UPDATES THE POST ON PAGE LOAD //
             setCurrentPost(responseJson.holdings.stock.posting);
-            // SETS THE PURCHASE PRICE ON PAGE LOAD //
+            // // SETS THE PURCHASE PRICE ON PAGE LOAD //
             setPurchase_price(responseJson.holdings.stock.purchase_price);
           })
       } catch (err) {
@@ -53,12 +54,10 @@ const StockDetails = (props) => {
   }, []);
   
   const updateROI = () => {
-    // console.log(props.currentMarketPrice);
     let initial = purchase_price;
     let current = props.currentMarketPrice;
     let ROI = (((current - initial) / initial) * 100).toFixed(2) + "%";
     setROI(ROI);
-    console.log(ROI);
   };
 
   return (

@@ -11,8 +11,8 @@ const UpdateStock = (props) => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const url = "https://fathomless-ravine-36841.herokuapp.com/";
-        // const url = `http://localhost:3000/api/v1/stocks/${id}`;
+        // const url = "https://fathomless-ravine-36841.herokuapp.com/";
+        const url = `http://localhost:3000/api/stocks/${id}`;
         const options = {
           method: "GET",
           headers: {
@@ -44,7 +44,7 @@ const UpdateStock = (props) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const url = `http://localhost:3000/api/v1/stocks/${id}`;
+      const url = `http://localhost:3000/api/stocks/${id}`;
       const options = {
         method: "PUT",
         headers: {

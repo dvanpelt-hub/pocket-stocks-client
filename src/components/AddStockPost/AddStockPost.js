@@ -3,7 +3,7 @@ import { StocksContext } from "../../context/StocksContext";
 import "./AddStockPost.css";
 
 const AddStockPost = (props) => {
-  const { addStock, addPosting } = useContext(StocksContext);
+  const { addStock } = useContext(StocksContext);
   const [ticker_symbol, setTicker_symbol] = useState("");
   const [purchase_price, setPurchase_price] = useState(0);
   const [recommendation_status, setRecommendation_status] = useState("Select");
@@ -14,8 +14,8 @@ const AddStockPost = (props) => {
     e.preventDefault();
     const postData = async () => {
       try {
-        const url = "https://fathomless-ravine-36841.herokuapp.com/";
-        // const url = "http://localhost:3000/api/v1/stocks";
+        // const url = "https://fathomless-ravine-36841.herokuapp.com/";
+        const url = "http://localhost:3000/api/stocks/";
         const options = {
           method: "POST",
           headers: {
@@ -38,7 +38,6 @@ const AddStockPost = (props) => {
             return response.json();
           })
           .then((responseJson) => {
-            // addPosting(responseJson.holdings.stock.posting);
             addStock(responseJson.holdings.stock);
           });
         } catch (err) {
