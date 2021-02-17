@@ -1,7 +1,7 @@
 import React from 'react';
 import './UpdatePost.css';
-import UpdateStock from '../../components/UpdateStock/UpdateStock';
-import Nav from '../../components/navigation/Nav';
+import UpdateStock from '../UpdateStock/UpdateStock';
+import Nav from '../navigation/Nav';
 
 const UpdatePost = () => {
   return (

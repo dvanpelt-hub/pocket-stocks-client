@@ -15,7 +15,7 @@ const AddStockPost = (props) => {
     const postData = async () => {
       try {
         // const url = "https://fathomless-ravine-36841.herokuapp.com/";
-        const url = "http://localhost:3000/api/stocks/";
+        const url = "https://quiet-woodland-22837.herokuapp.com/api/stocks/home";
         const options = {
           method: "POST",
           headers: {

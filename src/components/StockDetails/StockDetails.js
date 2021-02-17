@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { StocksContext } from "../context/StocksContext";
-import Nav from '../components/navigation/Nav';
+import { StocksContext } from "../../context/StocksContext";
+import Nav from '../navigation/Nav';
 
 
 const StockDetails = (props) => {
@@ -19,7 +19,7 @@ const StockDetails = (props) => {
     const fetchData = async () => {
       try {
         // const url = "https://fathomless-ravine-36841.herokuapp.com/";
-        const url = `http://localhost:3000/api/stocks/${id}`;
+        const url = `https://quiet-woodland-22837.herokuapp.com/api/stocks/${id}`;
         const options = {
           method: "GET",
           mode: "cors",
@@ -37,13 +37,13 @@ const StockDetails = (props) => {
           })
           .then((responseJson) => {
             // CALLBACK PROP TO USE SET CONTEXT ON TICKER SYMBOL //
-            props.setTicker(responseJson.holdings.stock.ticker_symbol);
+            props.setTicker(responseJson.ticker_symbol);
             // // UPDATES THE SELECTED STOCK ON PAGE LOAD //
-            setSelectedStock(responseJson.holdings.ticker_symbol);
+            setSelectedStock(responseJson.ticker_symbol);
             // // UPDATES THE POST ON PAGE LOAD //
-            setCurrentPost(responseJson.holdings.stock.posting);
+            setCurrentPost(responseJson.posting);
             // // SETS THE PURCHASE PRICE ON PAGE LOAD //
-            setPurchase_price(responseJson.holdings.stock.purchase_price);
+            setPurchase_price(responseJson.purchase_price);
           })
       } catch (err) {
         console.log(err);

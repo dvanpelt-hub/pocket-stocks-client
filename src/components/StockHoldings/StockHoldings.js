@@ -9,15 +9,16 @@ const StockHoldings = (props) => {
   const { selectedTickerSymbol, setSelectedTickerSymbol } = useContext(StocksContext);
 
   let history = useHistory();
+
   useEffect(() => {
     const fetchData = async () => {
       try {
-        // const url = "https://fathomless-ravine-36841.herokuapp.com/";
-        const url = "http://localhost:3000/api/stocks/";
+        const url = "https://quiet-woodland-22837.herokuapp.com/api/stocks/home";
+        // const url = "http://localhost:3000/api/stocks/home/";
         const options = {
           method: "GET",
           headers: {
-            Accept: "application/json",
+          "Accept": "application/json",
             "Content-Type": "application/json",
           },
         };
@@ -26,10 +27,11 @@ const StockHoldings = (props) => {
             if (!response.ok) {
               throw new Error("Error: " + response.status);
             }
-            return response.json();
+            return response.text();
           })
           .then((responseJson) => {
-            setStocks(responseJson.holdings.stocks);
+            console.log(responseJson);
+            // setStocks(responseJson);
           });
       } catch (err) {
         console.log(err);
@@ -43,8 +45,8 @@ const StockHoldings = (props) => {
     // Prevents event from sending function to the table row //
     e.stopPropagation();
     try {
-      // const url = "https://fathomless-ravine-36841.herokuapp.com/";
-      const url = `http://localhost:3000/api/stocks/${id}`;
+      // const url = "https://quiet-woodland-22837.herokuapp.com/";
+      const url = `https://quiet-woodland-22837.herokuapp.com/api/stocks/${id}`;
       const options = {
         method: "DELETE",
         headers: {
@@ -91,7 +93,7 @@ const StockHoldings = (props) => {
             <th scope="column1">Ticker Symbol</th>
             <th scope="column2">Status</th>
             <th scope="column3">Value</th>
-            <th scope="column6">Edit</th>
+            {/* <th scope="column6">Edit</th> */}
             <th scope="column7">Delete</th>
           </tr>
         </thead>
@@ -108,14 +110,14 @@ const StockHoldings = (props) => {
                   <td>{stock.ticker_symbol}</td>
                   <td>{stock.recommendation_status}</td>
                   <td>{stock.stock_value}</td>
-                  <td>
+                  {/* <td>
                     <button
                       onClick={(e) => handleUpdate(e, stock.id)}
                       className="btn"
                     >
                       Edit
                     </button>
-                  </td>
+                  </td> */}
                   <td>
                     {/* Use arrow function as a reference to the function so it executes on delete */}
                     <button

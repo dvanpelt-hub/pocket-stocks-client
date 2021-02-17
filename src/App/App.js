@@ -2,12 +2,12 @@
 
 import React, { useState } from "react";
 import { Switch, Route } from "react-router-dom";
-import Home from "../routes/Home";
+import Home from "../routes/Home/Home";
 import LandingPage from "../routes/LandingPage/LandingPage";
-import Login from "../routes/Login";
-import SignUp from "../routes/SignUp";
-import StockDetails from "../routes/StockDetails";
-import UpdatePost from "../routes/UpdatePost/UpdatePost";
+import Login from "../routes/Login/Login";
+import SignUp from "../routes/SignUp/SignUp";
+import StockDetails from "../components/StockDetails/StockDetails";
+import UpdatePost from "../components/UpdatePost/UpdatePost";
 import "./App.css";
 const API_TOKEN = process.env.REACT_APP_POCKET_STOCKS_KEY;
 
