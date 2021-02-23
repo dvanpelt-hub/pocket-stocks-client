@@ -38,7 +38,8 @@ const AddStockPost = (props) => {
             return response.json();
           })
           .then((responseJson) => {
-            addStock(responseJson.holdings.stock);
+            console.log(responseJson);
+            addStock(responseJson);
           });
         } catch (err) {
         console.log(err);

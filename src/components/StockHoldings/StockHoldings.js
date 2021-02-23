@@ -27,11 +27,10 @@ const StockHoldings = (props) => {
             if (!response.ok) {
               throw new Error("Error: " + response.status);
             }
-            return response.text();
+            return response.json();
           })
           .then((responseJson) => {
-            console.log(responseJson);
-            // setStocks(responseJson);
+            setStocks(responseJson);
           });
       } catch (err) {
         console.log(err);
@@ -70,12 +69,12 @@ const StockHoldings = (props) => {
     }
   };
 
-  const handleUpdate = (e, id) => {
-    // Prevents event from sending function to the table row //
-    e.stopPropagation();
-    // Addds the following URL to the history //
-    history.push(`/stocks/${id}/update`);
-  };
+  // const handleUpdate = (e, id) => {
+  //   // Prevents event from sending function to the table row //
+  //   e.stopPropagation();
+  //   // Addds the following URL to the history //
+  //   history.push(`/stocks/${id}/update`);
+  // };
 
   const handleNavigateStock = (id, ticker_symbol) => {
     setSelectedTickerSymbol(
@@ -99,8 +98,7 @@ const StockHoldings = (props) => {
         </thead>
         <tbody>
           {/* If stocks exist, run the code */}
-          {stocks &&
-            stocks.map((stock) => {
+          {stocks.map((stock) => {
               return (
                 <tr
                   key={stock.id}

@@ -6,9 +6,9 @@ const StockContextProvider = props => {
 
   const [stocks, setStocks] = useState([]);
 
-  const [selectedStock, setSelectedStock] = useState(null);
+  const [selectedStock, setSelectedStock] = useState("");
 
-  const [selectedTickerSymbol, setSelectedTickerSymbol] = useState(null);
+  const [selectedTickerSymbol, setSelectedTickerSymbol] = useState("");
 
   const addStock = (stock) => {
     setStocks([...stocks, stock]);

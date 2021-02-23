@@ -7,8 +7,8 @@ header,
   font-family: "Cormorant", sans-serif;
   position: center;
   text-align: center;
-  margin-left: 25px;
-  margin-right: 25px;
+  margin-left: 15px;
+  margin-right: 15px;
 }
 
 .navHold {
@@ -33,11 +33,11 @@ h1 {
 }
 
 header {
-  font-size: 30px;
+  font-size: 20px;
 }
 
 .landingPage {
-  font-size: 20px;
+  font-size: 15px;
 }
 
 .join_button {
@@ -55,6 +55,48 @@ input:focus {
 
 label {
   margin-right: 20px;
+}
+@media screen and (min-width: 450px) {
+  header,
+  .briefOV,
+  .appDesc,
+  .signUpForm,
+  .navHoldings,
+  .navHold {
+    font-family: "Cormorant", sans-serif;
+    position: center;
+    text-align: center;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  header {
+    font-size: 30px;
+  }
+
+  .landingPage {
+    font-size: 20px;
+  }
+}
+
+@media screen and (min-width: 620px) {
+  header,
+  .briefOV,
+  .appDesc,
+  .signUpForm,
+  .navHoldings,
+  .navHold {
+    font-family: "Cormorant", sans-serif;
+    position: center;
+    text-align: center;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+}
+
+@media screen and (min-width: 960px) {
+}
+
+@media screen and (min-width: 1200px) {
 }
 
 /**

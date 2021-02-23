@@ -1,3 +1,33 @@
 .formContainer {
-  margin: 4rem;
+  margin: 1rem;
 }
+
+@media screen and (min-width: 450px) {
+  .formContainer {
+    margin: 2rem;
+  }
+}
+
+/**
+*  Tablet Vertical
+*/
+@media screen and (min-width: 620px) {
+  .formContainer {
+    margin: 3rem;
+  }
+}
+
+/**
+ *  Tablet Horizontal
+ */
+@media screen and (min-width: 960px) {
+  .formContainer {
+    margin: 4rem;
+  }
+}
+
+/**
+ *  Desktop
+ */
+/* @media screen and (min-width: 1200px) {
+} */

@@ -1,7 +1,9 @@
+@import url("https://fonts.googleapis.com/css2?family=Cormorant:wght@400;700&display=swap");
+
 .links {
-  font-size: 20px;
+  font-size: 15px;
   display: flex;
-  margin-left: 20px;
+  margin-left: 15px;
 }
 
 .landing,
@@ -15,3 +17,43 @@
 .holdings {
   margin-left: 30px;
 }
+
+.header {
+  font-weight: lighter;
+  display: block;
+  text-align: center;
+  font-size: 30px;
+  font-family: "Cormorant", sans-serif;
+}
+
+@media screen and (min-width: 450px) {
+  .links {
+    font-size: 18px;
+    margin-left: 18px;
+  }
+}
+
+/**
+*  Tablet Vertical
+*/
+@media screen and (min-width: 620px) {
+  .links {
+    font-size: 20px;
+    margin-left: 20px;
+  }
+  .header {
+    font-size: 40px;
+  }
+}
+
+/**
+ *  Tablet Horizontal
+ */
+/* @media screen and (min-width: 960px) {
+} */
+
+/**
+ *  Desktop
+ */
+/* @media screen and (min-width: 1200px) {
+} */

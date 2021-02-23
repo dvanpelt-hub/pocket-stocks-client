@@ -4,6 +4,30 @@
   font-weight: lighter;
   display: block;
   text-align: center;
-  font-size: 60px;
+  font-size: 30px;
   font-family: "Cormorant", sans-serif;
 }
+
+@media screen and (min-width: 450px) {
+}
+
+/**
+*  Tablet Vertical
+*/
+@media screen and (min-width: 620px) {
+  .header {
+    font-size: 40px;
+  }
+}
+
+/**
+ *  Tablet Horizontal
+ */
+/* @media screen and (min-width: 960px) {
+} */
+
+/**
+ *  Desktop
+ */
+/* @media screen and (min-width: 1200px) {
+} */

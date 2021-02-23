@@ -1,6 +1,9 @@
 .form-row {
-  display: flex;
-  justify-content: space-evenly;
+  display: block;
+}
+
+.inputPurchasePrice {
+  width: 35px;
 }
 
 .form-column {
@@ -14,8 +17,8 @@
 
 textarea.textbox {
   width: 800px;
-  height: 200px;
-  margin-top: 3rem;
+  height: 100px;
+  margin-top: 1rem;
 }
 
 .postButton,
@@ -27,4 +30,24 @@ textarea.textbox {
 
 .inputTickerSymbol {
   width: 90px;
+}
+
+@media screen and (min-width: 450px) {
+  textarea.textbox {
+    width: 800px;
+    height: 150px;
+    margin-top: 2rem;
+  }
+}
+
+@media screen and (min-width: 620px) {
+  textarea.textbox {
+    width: 800px;
+    height: 200px;
+    margin-top: 3rem;
+  }
+  .form-row {
+    display: flex;
+    justify-content: space-evenly;
+  }
 }

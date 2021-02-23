@@ -4,15 +4,15 @@
   border-spacing: 0;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 3rem;
-  font-size: 20px;
+  margin-top: 1rem;
+  font-size: 15px;
 }
 
 .holdingsTable thead th {
   background-color: rgb(110, 100, 100);
   border: solid 1px rgb(255, 255, 255);
   color: rgb(255, 255, 255);
-  padding: 10px;
+  padding: 5px;
   text-align: left;
 }
 
@@ -38,3 +38,39 @@
 .roi {
   text-align: center;
 }
+
+@media screen and (min-width: 450px) {
+  .holdingsTable {
+    margin-top: 2rem;
+    font-size: 18px;
+  }
+  .holdingsTable thead th {
+    padding: 10px;
+  }
+  .links {
+    font-size: 18px;
+    margin-left: 18px;
+  }
+}
+
+@media screen and (min-width: 620px) {
+  .links {
+    font-size: 20px;
+    margin-left: 20px;
+  }
+  .header {
+    font-size: 40px;
+  }
+}
+
+/**
+ *  Tablet Horizontal
+ */
+/* @media screen and (min-width: 960px) {
+} */
+
+/**
+ *  Desktop
+ */
+/* @media screen and (min-width: 1200px) {
+} */
