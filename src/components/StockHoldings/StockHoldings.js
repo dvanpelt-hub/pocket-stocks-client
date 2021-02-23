@@ -4,21 +4,22 @@ import { useHistory } from "react-router-dom";
 import "./StockHoldings.css";
 
 const StockHoldings = (props) => {
-
   const { stocks, setStocks } = useContext(StocksContext);
-  const { selectedTickerSymbol, setSelectedTickerSymbol } = useContext(StocksContext);
+  const { selectedTickerSymbol, setSelectedTickerSymbol } = useContext(
+    StocksContext
+  );
 
   let history = useHistory();
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const url = "https://quiet-woodland-22837.herokuapp.com/api/stocks/home";
-        // const url = "http://localhost:3000/api/stocks/home/";
+        const url =
+          "https://quiet-woodland-22837.herokuapp.com/api/stocks/home";
         const options = {
           method: "GET",
           headers: {
-          "Accept": "application/json",
+            Accept: "application/json",
             "Content-Type": "application/json",
           },
         };
@@ -44,7 +45,6 @@ const StockHoldings = (props) => {
     // Prevents event from sending function to the table row //
     e.stopPropagation();
     try {
-      // const url = "https://quiet-woodland-22837.herokuapp.com/";
       const url = `https://quiet-woodland-22837.herokuapp.com/api/stocks/${id}`;
       const options = {
         method: "DELETE",
@@ -77,32 +77,32 @@ const StockHoldings = (props) => {
   // };
 
   const handleNavigateStock = (id, ticker_symbol) => {
-    setSelectedTickerSymbol(
-      ticker_symbol
-    );
+    setSelectedTickerSymbol(ticker_symbol);
     history.push(`/stocks/${id}/`);
   };
 
   return (
     <>
-    <div className="stockHoldings">
-      <table className="holdingsTable">
-        <thead>
-          <tr className="tableRow">
-            <th scope="column1">Ticker Symbol</th>
-            <th scope="column2">Status</th>
-            <th scope="column3">Value</th>
-            {/* <th scope="column6">Edit</th> */}
-            <th scope="column7">Delete</th>
-          </tr>
-        </thead>
-        <tbody>
-          {/* If stocks exist, run the code */}
-          {stocks.map((stock) => {
+      <div className="stockHoldings">
+        <table className="holdingsTable">
+          <thead>
+            <tr className="tableRow">
+              <th scope="column1">Ticker Symbol</th>
+              <th scope="column2">Status</th>
+              <th scope="column3">Value</th>
+              {/* <th scope="column6">Edit</th> */}
+              <th scope="column7">Delete</th>
+            </tr>
+          </thead>
+          <tbody>
+            {/* If stocks exist, run the code */}
+            {stocks.map((stock) => {
               return (
                 <tr
                   key={stock.id}
-                  onClick={() => handleNavigateStock(stock.id, stock.ticker_symbol)}
+                  onClick={() =>
+                    handleNavigateStock(stock.id, stock.ticker_symbol)
+                  }
                   className="trow"
                 >
                   <td>{stock.ticker_symbol}</td>
@@ -128,9 +128,9 @@ const StockHoldings = (props) => {
                 </tr>
               );
             })}
-        </tbody>
-      </table>
-    </div>
+          </tbody>
+        </table>
+      </div>
     </>
   );
 };

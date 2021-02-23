@@ -14,7 +14,6 @@ const AddStockPost = (props) => {
     e.preventDefault();
     const postData = async () => {
       try {
-        // const url = "https://fathomless-ravine-36841.herokuapp.com/";
         const url = "https://quiet-woodland-22837.herokuapp.com/api/stocks/home";
         const options = {
           method: "POST",
@@ -106,9 +105,6 @@ const AddStockPost = (props) => {
         <div onClick={handleSubmit} className="postButton">
           <button className="btn">Post!</button>
         </div>
-        {/* <div className="getUpdatedMarketPrices">
-          <button onClick={props.getStockPrice} className="btn">Refresh Prices</button>
-        </div> */}
       </form>
     </div>
   );

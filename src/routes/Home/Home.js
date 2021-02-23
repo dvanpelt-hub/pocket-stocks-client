@@ -12,8 +12,6 @@ const Home = (props) => {
       <Header />
       <AddStockPost getStockPrice={props.getStockPrice} />
       <StockHoldings
-      // ROI={this.props.ROI}
-      // currentMarketPrice={this.props.currentMarketPrice}
       />
     </div>
   );

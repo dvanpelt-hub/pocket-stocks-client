@@ -1,24 +1,21 @@
 import React, { useContext, useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { StocksContext } from "../../context/StocksContext";
-import Nav from '../navigation/Nav';
-
+import Nav from "../navigation/Nav";
 
 const StockDetails = (props) => {
   const { id } = useParams();
   const { selectedStock, setSelectedStock } = useContext(StocksContext);
   const { selectedTickerSymbol, setSelectedTickerSymbol } = useContext(
     StocksContext
-    );
+  );
   const [currentPost, setCurrentPost] = React.useState("");
   const [purchase_price, setPurchase_price] = React.useState(0);
   const [ROI, setROI] = React.useState(0);
 
   useEffect(() => {
-
     const fetchData = async () => {
       try {
-        // const url = "https://fathomless-ravine-36841.herokuapp.com/";
         const url = `https://quiet-woodland-22837.herokuapp.com/api/stocks/${id}`;
         const options = {
           method: "GET",
@@ -44,7 +41,7 @@ const StockDetails = (props) => {
             setCurrentPost(responseJson.posting);
             // // SETS THE PURCHASE PRICE ON PAGE LOAD //
             setPurchase_price(responseJson.purchase_price);
-          })
+          });
       } catch (err) {
         console.log(err);
       }
@@ -52,7 +49,7 @@ const StockDetails = (props) => {
     fetchData();
     // Empty dependency array called here, which makes it run only once on MOUNT //
   }, []);
-  
+
   const updateROI = () => {
     let initial = purchase_price;
     let current = props.currentMarketPrice;
@@ -81,9 +78,7 @@ const StockDetails = (props) => {
         Get current price
       </button>
       <br />
-      <button onClick={updateROI}>
-        Get ROI
-      </button>
+      <button onClick={updateROI}>Get ROI</button>
     </div>
   );
 };

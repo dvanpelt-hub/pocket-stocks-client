@@ -11,6 +11,10 @@ header,
   margin-right: 15px;
 }
 
+li {
+  list-style-type: none;
+}
+
 .navHold {
   text-decoration: none;
   font-weight: bolder;
