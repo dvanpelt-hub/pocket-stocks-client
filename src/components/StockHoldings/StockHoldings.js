@@ -120,7 +120,7 @@ const StockHoldings = (props) => {
                     {/* Use arrow function as a reference to the function so it executes on delete */}
                     <button
                       onClick={(e) => handleDelete(e, stock.id)}
-                      className="btn"
+                      className="deleteBtn"
                     >
                       Delete
                     </button>

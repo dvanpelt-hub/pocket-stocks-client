@@ -3,7 +3,7 @@
 .links {
   font-size: 15px;
   display: flex;
-  margin-left: 15px;
+  justify-content: space-around;
 }
 
 .landing,
@@ -12,6 +12,13 @@
   color: rgb(114, 55, 53);
   font-weight: bolder;
   font-family: "Cormorant", sans-serif;
+}
+
+.landing:hover,
+.holdings:hover {
+  -webkit-transform: scale(1.3);
+  -ms-transform: scale(1.3);
+  transform: scale(1.1);
 }
 
 .holdings {

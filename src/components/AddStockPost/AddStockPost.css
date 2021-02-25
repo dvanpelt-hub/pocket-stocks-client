@@ -1,13 +1,33 @@
+.postBtn {
+  text-decoration: none;
+  font-weight: bolder;
+  color: rgb(255, 255, 255);
+  padding: 10px;
+  background-color: rgb(124, 119, 118);
+  border-radius: 10px;
+  margin: 10px;
+}
+
+.postBtn:hover {
+  cursor: pointer;
+  padding: 10px;
+  background-color: rgb(51, 36, 36);
+  color: rgb(209, 243, 165);
+  border-radius: 10px;
+}
+
 .form-row {
   display: block;
 }
 
 .inputPurchasePrice {
   width: 35px;
+  margin: 0px;
 }
 
 .form-column {
   text-align: center;
+  margin: 10px;
 }
 
 .commentSection {
@@ -19,17 +39,20 @@ textarea.textbox {
   width: 800px;
   height: 100px;
   margin-top: 1rem;
+  outline: none;
+  resize: none;
 }
 
 .postButton,
 .getUpdatedMarketPrices {
   display: flex;
-  margin: 3rem;
+  margin: 2rem;
   justify-content: center;
 }
 
 .inputTickerSymbol {
   width: 90px;
+  margin: 0px;
 }
 
 @media screen and (min-width: 450px) {

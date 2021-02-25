@@ -2,6 +2,7 @@ import React, { useContext, useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { StocksContext } from "../../context/StocksContext";
 import Nav from "../navigation/Nav";
+import "./StockDetails.css";
 
 const StockDetails = (props) => {
   const { id } = useParams();
@@ -58,27 +59,34 @@ const StockDetails = (props) => {
   };
 
   return (
-    <div>
+    <div className="detailForm">
       <Nav />
       {/* Renders only if a stock was selected */}
       <h1>{selectedStock && selectedStock.ticker_symbol}</h1>
       <div>
-        <p>Current Market Price: ${props.currentMarketPrice}</p>
+        <p className="currentPriceDetail">
+          Current Market Price: ${props.currentMarketPrice}
+        </p>
       </div>
       <div>
-        <p>Purchase price: ${purchase_price}</p>
+        <p className="purchasePriceDetail">Purchase price: ${purchase_price}</p>
       </div>
       <div>
-        <p>ROI: {ROI}</p>
+        <p className="currentROIDetail">ROI: {ROI}</p>
       </div>
       <div>
-        <p>Post: {currentPost}</p>
+        <p className="postDetail">Post: {currentPost}</p>
       </div>
-      <button onClick={() => props.getStockPrice(selectedTickerSymbol)}>
+      <button
+        className="getPrice"
+        onClick={() => props.getStockPrice(selectedTickerSymbol)}
+      >
         Get current price
       </button>
       <br />
-      <button onClick={updateROI}>Get ROI</button>
+      <button className="updateROI" onClick={updateROI}>
+        Get ROI
+      </button>
     </div>
   );
 };

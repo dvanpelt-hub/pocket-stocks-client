@@ -2,19 +2,22 @@ import React, { useState, useContext } from "react";
 import { StocksContext } from "../../context/StocksContext";
 import "./AddStockPost.css";
 
-const AddStockPost = (props) => {
+const AddStockPost = () => {
   const { addStock } = useContext(StocksContext);
   const [ticker_symbol, setTicker_symbol] = useState("");
   const [purchase_price, setPurchase_price] = useState(0);
   const [recommendation_status, setRecommendation_status] = useState("Select");
   const [stock_value, setStock_value] = useState("Select");
-  const [posting, setPosting] = useState("Enter up to 120 characters in a post");
+  const [posting, setPosting] = useState(
+    "Enter up to 120 characters in a post"
+  );
 
   const handleSubmit = (e) => {
     e.preventDefault();
     const postData = async () => {
       try {
-        const url = "https://quiet-woodland-22837.herokuapp.com/api/stocks/home";
+        const url =
+          "https://quiet-woodland-22837.herokuapp.com/api/stocks/home";
         const options = {
           method: "POST",
           headers: {
@@ -26,7 +29,7 @@ const AddStockPost = (props) => {
             recommendation_status: recommendation_status,
             stock_value: stock_value,
             posting: posting,
-            purchase_price: purchase_price
+            purchase_price: purchase_price,
           }),
         };
         await fetch(url, options)
@@ -40,7 +43,7 @@ const AddStockPost = (props) => {
             console.log(responseJson);
             addStock(responseJson);
           });
-        } catch (err) {
+      } catch (err) {
         console.log(err);
       }
     };
@@ -103,7 +106,7 @@ const AddStockPost = (props) => {
           />
         </div>
         <div onClick={handleSubmit} className="postButton">
-          <button className="btn">Post!</button>
+          <button className="postBtn">Post!</button>
         </div>
       </form>
     </div>

@@ -1,3 +1,21 @@
+.deleteBtn {
+  text-decoration: none;
+  font-weight: bolder;
+  color: rgb(255, 255, 255);
+  padding: 10px;
+  background-color: rgb(124, 119, 118);
+  border-radius: 10px;
+  margin: 10px;
+}
+
+.deleteBtn:hover {
+  cursor: pointer;
+  padding: 10px;
+  background-color: rgb(51, 36, 36);
+  color: rgb(243, 133, 106);
+  border-radius: 10px;
+}
+
 .holdingsTable {
   border: solid 1px rgb(175, 166, 166);
   border-collapse: collapse;
@@ -22,12 +40,8 @@
 }
 
 .trow:hover,
-.btn {
+.deleteBtn {
   cursor: pointer;
-}
-
-.btn:hover {
-  background-color: rgb(255, 255, 255);
 }
 
 .trow:hover {
