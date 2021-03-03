@@ -69,13 +69,6 @@ const StockHoldings = (props) => {
     }
   };
 
-  // const handleUpdate = (e, id) => {
-  //   // Prevents event from sending function to the table row //
-  //   e.stopPropagation();
-  //   // Addds the following URL to the history //
-  //   history.push(`/stocks/${id}/update`);
-  // };
-
   const handleNavigateStock = (id, ticker_symbol) => {
     setSelectedTickerSymbol(ticker_symbol);
     history.push(`/stocks/${id}/`);
@@ -108,14 +101,6 @@ const StockHoldings = (props) => {
                   <td>{stock.ticker_symbol}</td>
                   <td>{stock.recommendation_status}</td>
                   <td>{stock.stock_value}</td>
-                  {/* <td>
-                    <button
-                      onClick={(e) => handleUpdate(e, stock.id)}
-                      className="btn"
-                    >
-                      Edit
-                    </button>
-                  </td> */}
                   <td>
                     {/* Use arrow function as a reference to the function so it executes on delete */}
                     <button

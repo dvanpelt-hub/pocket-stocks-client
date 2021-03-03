@@ -11,13 +11,13 @@ const AddStockPost = () => {
   const [posting, setPosting] = useState(
     "Enter up to 120 characters in a post"
   );
+  const URL = process.env.REACT_APP_POCKET_STOCKS_DATABASE_URL;
 
   const handleSubmit = (e) => {
     e.preventDefault();
     const postData = async () => {
       try {
-        const url =
-          "https://quiet-woodland-22837.herokuapp.com/api/stocks/home";
+        const url = `${URL}/api/stocks/home`;
         const options = {
           method: "POST",
           headers: {
@@ -40,7 +40,6 @@ const AddStockPost = () => {
             return response.json();
           })
           .then((responseJson) => {
-            console.log(responseJson);
             addStock(responseJson);
           });
       } catch (err) {

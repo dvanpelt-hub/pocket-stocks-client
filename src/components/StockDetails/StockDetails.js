@@ -14,10 +14,12 @@ const StockDetails = (props) => {
   const [purchase_price, setPurchase_price] = React.useState(0);
   const [ROI, setROI] = React.useState(0);
 
+  const URL = process.env.REACT_APP_POCKET_STOCKS_DATABASE_URL;
+
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const url = `https://quiet-woodland-22837.herokuapp.com/api/stocks/${id}`;
+        const url = `${URL}/api/stocks/${id}`;
         const options = {
           method: "GET",
           mode: "cors",

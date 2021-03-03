@@ -7,8 +7,8 @@ import SignUp from "../routes/SignUp/SignUp";
 import StockDetails from "../components/StockDetails/StockDetails";
 import UpdatePost from "../components/UpdatePost/UpdatePost";
 import "./App.css";
-const API_TOKEN = process.env.REACT_APP_POCKET_STOCKS_KEY;
 
+const API_TOKEN = process.env.REACT_APP_POCKET_STOCKS_KEY;
 
 const App = () => {
   const [currentMarketPrice, setCurrentMarketPrice] = React.useState(0);
@@ -25,8 +25,7 @@ const App = () => {
       {
         method: "GET",
         headers: {
-          "x-rapidapi-key":
-            `${API_TOKEN}`,
+          "x-rapidapi-key": `${API_TOKEN}`,
           "x-rapidapi-host": "twelve-data1.p.rapidapi.com",
         },
       }
@@ -55,11 +54,7 @@ const App = () => {
           exact
           path="/home"
           render={() => {
-            return (
-              <Home
-                getStockPrice={getStockPrice}
-              />
-            );
+            return <Home getStockPrice={getStockPrice} />;
           }}
         />
         <Route
