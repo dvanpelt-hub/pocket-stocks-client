@@ -9,13 +9,14 @@ const StockHoldings = (props) => {
     StocksContext
   );
 
+  const URL = process.env.REACT_APP_POCKET_STOCKS_DATABASE_URL;
+
   let history = useHistory();
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const url =
-          "https://quiet-woodland-22837.herokuapp.com/api/stocks/home";
+        const url = `${URL}/api/stocks/home`;
         const options = {
           method: "GET",
           headers: {
@@ -45,7 +46,7 @@ const StockHoldings = (props) => {
     // Prevents event from sending function to the table row //
     e.stopPropagation();
     try {
-      const url = `https://quiet-woodland-22837.herokuapp.com/api/stocks/${id}`;
+      const url = `${URL}/api/stocks/${id}`;
       const options = {
         method: "DELETE",
         headers: {
