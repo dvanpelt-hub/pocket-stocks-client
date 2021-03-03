@@ -21,12 +21,21 @@ From there, be sure to click 'Get current price' in order to retrieve the most r
 To calculate the ROI based on the purchase price listed in the original post, simply click the 'Get ROI' button.
 
 Technology used:
+
 -JavaScript ES6
+
 -CSS3
+
 -HTML5
+
 -React
+
 -NodeJS
+
 -PostgreSQL
+
 -Express
+
 -Knex
+
 -Heroku
