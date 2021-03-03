@@ -3,17 +3,26 @@
   font-weight: bolder;
   color: rgb(255, 255, 255);
   padding: 10px;
-  background-color: rgb(124, 119, 118);
+  background-color: #1c4542;
   border-radius: 10px;
   margin: 10px;
 }
 
 .postBtn:hover {
   cursor: pointer;
-  opacity: 0.9;
-  background-color: rgb(51, 37, 36);
-  color: rgb(247, 232, 152);
+  background-color: #349e95;
+  color: #ffffff;
   border-radius: 10px;
+}
+
+.addStockSection {
+  opacity: 0.5;
+  padding-top: 15px;
+  padding-bottom: 10px;
+  color: white;
+  background: linear-gradient(145deg, #1c4542 60%, #398563 60%);
+  border-radius: 12px;
+  font-family: "Cormorant", sans-serif;
 }
 
 .form-row {
@@ -41,6 +50,7 @@ textarea.textbox {
   margin-top: 1rem;
   outline: none;
   resize: none;
+  background-color: #86b6b2;
 }
 
 .postButton,
@@ -64,6 +74,10 @@ textarea.textbox {
 }
 
 @media screen and (min-width: 620px) {
+  .addStockSection {
+    margin-left: 50px;
+    margin-right: 50px;
+  }
   textarea.textbox {
     width: 800px;
     height: 200px;
