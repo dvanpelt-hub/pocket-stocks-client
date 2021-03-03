@@ -10,10 +10,15 @@
 
 .postBtn:hover {
   cursor: pointer;
-  padding: 10px;
-  background-color: rgb(51, 36, 36);
-  color: rgb(209, 243, 165);
+  opacity: 0.9;
+  background-color: rgb(51, 37, 36);
+  color: rgb(247, 232, 152);
   border-radius: 10px;
+}
+
+.addStockSection {
+  opacity: 0.8;
+  padding: 10px;
 }
 
 .form-row {

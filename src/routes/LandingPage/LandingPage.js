@@ -15,7 +15,7 @@ export default class LandingPage extends Component {
             Holdings
           </Link>
         </div>
-        <header>
+        <header className="landingHeader">
           <h1>Pocket Stocks</h1>
           {/* <button className="join_button" type="submit">Sign up</button> */}
         </header>
