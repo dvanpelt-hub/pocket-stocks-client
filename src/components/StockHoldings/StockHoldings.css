@@ -1,9 +1,14 @@
+.stockHoldings {
+  font-family: "Cormorant", sans-serif;
+  font-weight: 600;
+}
+
 .deleteBtn {
   text-decoration: none;
   font-weight: bolder;
   color: rgb(255, 255, 255);
   padding: 10px;
-  background-color: rgb(124, 119, 118);
+  background-color: #1c4542;
   border-radius: 10px;
   margin: 10px;
 }
@@ -11,31 +16,31 @@
 .deleteBtn:hover {
   cursor: pointer;
   padding: 10px;
-  background-color: rgb(51, 36, 36);
-  color: rgb(243, 133, 106);
+  background-color: #3e9e4f;
+  color: #1c4542;
   border-radius: 10px;
 }
 
 .holdingsTable {
-  border: solid 1px rgb(175, 166, 166);
+  border: solid 1px #395664;
   border-collapse: collapse;
   border-spacing: 0;
   margin-left: auto;
   margin-right: auto;
   margin-top: 1rem;
   font-size: 15px;
+  color: #1c4542;
 }
 
 .holdingsTable thead th {
-  background-color: rgb(110, 100, 100);
-  border: solid 1px rgb(255, 255, 255);
+  background-color: #579c7d;
   color: rgb(255, 255, 255);
   padding: 5px;
-  text-align: left;
+  text-align: center;
 }
 
 .holdingsTable tbody td {
-  color: #333;
+  color: #1c4542;
   padding: 10px;
 }
 
@@ -45,7 +50,7 @@
 }
 
 .trow:hover {
-  background-color: rgb(226, 226, 226);
+  background-color: #d0f0ed;
 }
 
 .price,

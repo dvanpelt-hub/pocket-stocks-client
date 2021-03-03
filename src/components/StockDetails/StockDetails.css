@@ -4,7 +4,7 @@
   font-weight: bolder;
   color: rgb(255, 255, 255);
   padding: 10px;
-  background-color: rgb(124, 119, 118);
+  background-color: #1c4542;
   border-radius: 10px;
   margin: 10px;
 }
@@ -13,8 +13,8 @@
 .updateROI:hover {
   cursor: pointer;
   padding: 10px;
-  background-color: rgb(221, 221, 221);
-  color: rgb(139, 137, 136);
+  background-color: #3e9e4f;
+  color: #1c4542;
   border-radius: 10px;
 }
 
