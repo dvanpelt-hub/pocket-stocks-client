@@ -18,6 +18,17 @@
   border-radius: 10px;
 }
 
+.detailTable {
+  margin-top: 50px;
+  opacity: 0.7;
+  padding-top: 15px;
+  padding-bottom: 10px;
+  color: white;
+  background: linear-gradient(145deg, #1c4542 60%, #398563 60%);
+  border-radius: 12px;
+  font-family: "Cormorant", sans-serif;
+}
+
 .detailForm {
   font-family: "Cormorant", sans-serif;
   position: center;

@@ -64,31 +64,35 @@ const StockDetails = (props) => {
     <div className="detailForm">
       <Nav />
       {/* Renders only if a stock was selected */}
-      <h1>{selectedStock && selectedStock.ticker_symbol}</h1>
-      <div>
-        <p className="currentPriceDetail">
-          Current Market Price: ${props.currentMarketPrice}
-        </p>
+      <div className="detailTable">
+        <h1>{selectedStock && selectedStock.ticker_symbol}</h1>
+        <div className="priceDetails">
+          <p className="currentPriceDetail">
+            Current Market Price: ${props.currentMarketPrice}
+          </p>
+        </div>
+        <div>
+          <p className="purchasePriceDetail">
+            Purchase price: ${purchase_price}
+          </p>
+        </div>
+        <div>
+          <p className="currentROIDetail">ROI: {ROI}</p>
+        </div>
+        <div>
+          <p className="postDetail">Post: {currentPost}</p>
+        </div>
+        <button
+          className="getPrice"
+          onClick={() => props.getStockPrice(selectedTickerSymbol)}
+        >
+          Get current price
+        </button>
+        <br />
+        <button className="updateROI" onClick={updateROI}>
+          Get ROI
+        </button>
       </div>
-      <div>
-        <p className="purchasePriceDetail">Purchase price: ${purchase_price}</p>
-      </div>
-      <div>
-        <p className="currentROIDetail">ROI: {ROI}</p>
-      </div>
-      <div>
-        <p className="postDetail">Post: {currentPost}</p>
-      </div>
-      <button
-        className="getPrice"
-        onClick={() => props.getStockPrice(selectedTickerSymbol)}
-      >
-        Get current price
-      </button>
-      <br />
-      <button className="updateROI" onClick={updateROI}>
-        Get ROI
-      </button>
     </div>
   );
 };
