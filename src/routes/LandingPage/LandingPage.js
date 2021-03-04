@@ -20,7 +20,7 @@ export default class LandingPage extends Component {
           {/* <button className="join_button" type="submit">Sign up</button> */}
         </header>
         <section className="briefOV">
-          <h3>Stock predictions in the palm of your hand</h3>
+          <h2>Stock predictions in the palm of your hand</h2>
           <p>
             Everyone wants to say "I told you so". Say it with your stock market
             predictions!
